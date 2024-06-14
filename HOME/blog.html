@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/android-chrome-512x512.png">
+  <title>Blogs</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1200px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: auto; /* Center the content wrapper */
+    }
+    .container {
+        max-width: 300px;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        overflow: hidden;
+        flex: 1;
+        transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+    }
+    .container:hover {
+        transform: translateY(-5px); /* Add a slight lift on hover */
+    }
+    .container img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .title {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+    .read-more-content {
+        display: none;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .read-more-link {
+        color: #007bff;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+        .content-wrapper {
+            flex-direction: column; /* Change flex direction to column on smaller screens */
+            align-items: center; /* Center items */
+        }
+        .container {
+            width: 80%; /* Adjust container width */
+        }
+    }
+    .blink {
+                animation: blinker 2s ease-in-out infinite;
+                color: rgb(0, 0, 0);
+                font-family: sans-serif;
+                font-size: 50px;
+            }
+
+            @keyframes blinker {
+                50% {
+                    opacity: 0;
+                }
+            }
+  </style>
+</head>
+<body style="
+    background-image: url('../img/tree.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+">
+  <div class="hero">
+    <nav>
+      <label for="logo" class="logo">Anna's Blog.</label>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <img src="../img/bg.jpg" alt="profil" class="user-pic" onclick="toggleMenu()" />
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="../img/bg.jpg" alt="profil" class="user-pic" />
+            <h3>Anna's Blog</h3>
+          </div>
+          <hr />
+          <a href="#" class="sub-menu-link">
+            <i data-feather="user" class="icon"></i>
+            <p>Edit Profile</p>
+            <span> > </span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <i data-feather="settings" class="icon"></i>
+            <p>Settings & Privacy</p>
+            <span> > </span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <i data-feather="help-circle" class="icon"></i>
+            <p>Help & Support</p>
+            <span> > </span>
+          </a>
+          <a href="../index.html" class="sub-menu-link">
+            <i data-feather="log-out" class="icon"></i>
+            <p>Log Out</p>
+            <span> > </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+            <marquee behavior="scroll" direction="left">
+                <img src="../img/fall.gif" width="450" height="140" alt="Natural" />
+            </marquee>
+
+        <center><h1 class="blink">MY MEMORIES</h1></center>
+    <div class="content-wrapper">
+        <div class="container">
+            <img src="../img/1.jfif" alt="Article Image">
+            <div class="title">FAMILY GATHERING</div>
+            <div class="read-more-link" onclick="toggleReadMore(this)">Read More</div>
+            <div class="read-more-content">
+            <p>This picture is unforgettable kasi nagkita kita kaming mag pipinsan at nag kwentohan kami nang mga ganap namin sa buhay nag kumustahan kami.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../img/2.jfif" alt="Article Image">
+            <div class="title">FATHER's BIRTHDAY</div>
+            <div class="read-more-link" onclick="toggleReadMore(this)">Read More</div>
+            <div class="read-more-content">
+                <p>Itong picture nato is birthday nang papa ko nag yayaan kami sa mahayag maligo. Kaso hindi marunong lumangoy si papa kaya nasa cottage lang sya.🤭</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../img/3.jfif" alt="Article Image">
+            <div class="title">GALA-AN</div>
+            <div class="read-more-link" onclick="toggleReadMore(this)">Read More</div>
+            <div class="read-more-content">
+                <p>This picture captured last dec 5, 2022 gumala kami nang mga pamangkin ko at kumain kami sa labas. Pumunta kami nyan sa boulevard, capitol at Christmas village.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../img/4.jfif" alt="Article Image">
+            <div class="title">Christmas Day</div>
+            <div class="read-more-link" onclick="toggleReadMore(this)">Read More</div>
+            <div class="read-more-content">
+                <p>This picture was captured dec.  28, 2020 nag Christmas party Kami mga anak at apo nila lolo bonggo at lola emelia at ito ang family picture namin may iba jan wala na ngayon😢 pero not literally na wala na naghiwalay na ang asawa nang kuya ko😅</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../img/5.jfif" alt="Article Image">
+            <div class="title">GALA WITH FAM</div>
+            <div class="read-more-link" onclick="toggleReadMore(this)">Read More</div>
+            <div class="read-more-content">
+                <p>Itong time nato nag yayaan kaming kumain sa labas kasi gusto lang namin charrr 😅 kasi wala na kaming oras magluto nang ulam kasi pagod lahat kaya kumain nalang kami sa labas.</p>
+            </div>
+        </div>
+        <!-- More container divs -->
+    </div>
+    <script>
+        function toggleReadMore(link) {
+            const content = link.parentElement.querySelector('.read-more-content');
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                link.textContent = 'Read Less';
+            } else {
+                content.style.display = 'none';
+                link.textContent = 'Read More';
+            }
+        }
+        feather.replace();
+    let subMenu = document.getElementById("subMenu");
+    function toggleMenu() {
+      subMenu.classList.toggle("open-menu");
+    }
+    </script>
+</body>
+</html>

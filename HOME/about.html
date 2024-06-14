@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/android-chrome-512x512.png">
+  <title>About Me</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/phosphor-icons"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hero">
+    <nav>
+      <label for="logo" class="logo">Anna's Blog.</label>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <img src="../img/bg.jpg" alt="profil" class="user-pic" onclick="toggleMenu()" />
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="../img/bg.jpg" alt="profil" class="user-pic" />
+            <h3>Anna's Blog</h3>
+          </div>
+          <hr />
+          <a href="#" class="sub-menu-link">
+            <i data-feather="user" class="icon"></i>
+            <p>Edit Profile</p>
+            <span> > </span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <i data-feather="settings" class="icon"></i>
+            <p>Settings & Privacy</p>
+            <span> > </span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <i data-feather="help-circle" class="icon"></i>
+            <p>Help & Support</p>
+            <span> > </span>
+          </a>
+          <a href="../index.html" class="sub-menu-link">
+            <i data-feather="log-out" class="icon"></i>
+            <p>Log Out</p>
+            <span> > </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <style>
+        header {
+          background-color: #666;
+          padding: 30px;
+          text-align: center;
+          font-size: 35px;
+          color: white;
+        }
+        article {
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%; /* Adjust as needed */
+  background-color: #bbb3f8;
+  height: 370px; /* only for demonstration, should be removed */
+}
+        article h1, p{
+            font-size: 250%;
+        }
+        
+        /* Clear floats after the columns */
+        section::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Style the footer */
+        footer {
+          background-color: #000000;
+          padding: 20px;
+          text-align: center;
+          color: white;
+          background-image: url(../img/sea.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: center;
+        }
+      /* Social icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 10px; /* Adjust spacing between icons */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.social-icons a:hover .icon {
+  transform: scale(1.2); /* Increase size on hover */
+}
+
+/* Styling for Phosphor Icons */
+.icon {
+  font-size: 24px; /* Adjust icon size as needed */
+  color: #ffffff; /* Adjust icon color */
+}
+ 
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+          aside, article {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+        </style>
+        </head>
+        <body>
+        <header style="
+            background-image: url(../img/sea.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;">
+          <h2>ABOUT ME</h2>
+        </header>
+        
+        <section>
+          <article>
+            <center>
+                <br>
+                <br>
+            <h1>Hi I am Anna Marie Quico</h1>
+            <p>BSCS-Student</p>
+            <p>2nd Yr and currently studying at NEMSU</p>
+            </center>
+          </article>
+          <aside>
+            <img src="../img/me.png" alt="Sample Image" class="responsive-image" />
+          </aside>
+        </section>
+        <footer>
+            <div class="social-icons">
+                <a href="https://tiktok.com/example"><i class="ph-tiktok-logo icon"></i></a>
+                <a href="https://facebook.com/example"><i class="ph-facebook-logo icon"></i></a>
+                <a href="https://instagram.com/example"><i class="ph-instagram-logo icon"></i></a>
+              </div>
+        </footer>
+    <script>
+    feather.replace();
+    let subMenu = document.getElementById("subMenu");
+    function toggleMenu() {
+    subMenu.classList.toggle("open-menu");
+    }
+    </script>
+</body>
+</html>

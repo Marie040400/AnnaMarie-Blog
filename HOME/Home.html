@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/android-chrome-512x512.png">
+  <title>Annamarie</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="bg">
+  <div class="hero">
+    <nav>
+      <label for="logo" class="logo">Anna's Blog.</label>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <img src="../img/android-chrome-512x512.png" alt="profil" class="user-pic" onclick="toggleMenu()" />
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="../img/android-chrome-512x512.png" alt="profil" class="user-pic" />
+            <h3>Anna's Blog</h3>
+          </div>
+          <hr />
+          <a href="#" class="sub-menu-link">
+            <i data-feather="user" class="icon"></i>
+            <p>Edit Profile</p>
+            <span> > </span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <i data-feather="settings" class="icon"></i>
+            <p>Settings & Privacy</p>
+            <span> > </span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <i data-feather="help-circle" class="icon"></i>
+            <p>Help & Support</p>
+            <span> > </span>
+          </a>
+          <a href="../index.html" class="sub-menu-link">
+            <i data-feather="log-out" class="icon"></i>
+            <p>Log Out</p>
+            <span> > </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="center-text">
+      <h2>Welcome to my Personal Blog</h2>
+      <div class="blog-frame">
+        <iframe src="blog.html" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <a id="contact"></a>
+    <div class="container">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>Email: Annamarie@gmail.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: Gamot,Tandag City, Philipphines</p>
+      </div>
+      <div class="social-icons">
+        <h3>Follow Me</h3>
+        <ul>
+          <li><a href="#"><i data-feather="twitter"></i></a></li>
+          <li><a href="#"><i data-feather="facebook"></i></a></li>
+          <li><a href="#"><i data-feather="instagram"></i></a></li>
+          <li><a href="#"><i data-feather="linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+    let subMenu = document.getElementById("subMenu");
+    function toggleMenu() {
+      subMenu.classList.toggle("open-menu");
+    }
+  </script>
+</body>
+</html>
